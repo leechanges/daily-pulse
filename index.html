@@ -26,7 +26,7 @@ h1{font-size:24px;background:linear-gradient(135deg,#f0ece4,#e8b84b);-webkit-bac
 var HN="https://hn.algolia.com/api/v1";
 async function loadNews(){
   try{
-    var r=await fetch(HN+"/search?tags=story&hitsPerPage=20&sortBy=points");
+    var r=await fetch(HN+"/search?tags=story&hitsPerPage=30&numericFilters=points>100");
     var d=await r.json();
     var h='';
     d.hits.forEach(function(s,i){
