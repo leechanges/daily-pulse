@@ -149,6 +149,8 @@ footer{border-top:1px solid var(--border);padding:28px 48px;max-width:1400px;mar
 </footer>
 <canvas id="gc" width="400" height="220" style="display:none"></canvas>
 </script>
-<script src="app.js"></script>
+<script>
+fetch("app.js").then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error(e));
+</script>
 </body>
 </html>
